@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- [AQUÍ VA EL TÍTULO DE LA PESTAÑA DEL NAVEGADOR] -->
+  <title>Título del Proyecto — StoryData Studio</title>
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- D3.js v7 — librería de visualizaciones -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SECCIÓN 1: HERO
+       Contiene: título principal, subtítulo e intención narrativa
+       Responsable: Isabella (texto) + Felipe (implementación)
+  =============================================================== -->
+  <header class="hero">
+
+    <!-- Eyebrow: etiqueta pequeña arriba del título -->
+    <p class="hero__eyebrow">[AQUÍ VA LA ETIQUETA — ej: "Marketing Bancario · 2025"]</p>
+
+    <!-- Título principal H1 -->
+    <h1 class="hero__title">[AQUÍ VA EL TÍTULO PRINCIPAL]</h1>
+
+    <!-- Subtítulo / intención narrativa en una línea -->
+    <p class="hero__subtitle">[AQUÍ VA EL SUBTÍTULO — intención narrativa en 1-2 líneas]</p>
+
+  </header>
+
+
+  <!-- ============================================================
+       SECCIÓN 2: CONTEXTO
+       Contiene: texto explicativo del dataset y la campaña
+       Responsable: Isabella redacta, Felipe implementa
+  =============================================================== -->
+  <section class="context" id="contexto">
+
+    <div class="context__inner">
+
+      <!-- Título de sección -->
+      <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN CONTEXTO]</h2>
+
+      <!-- Párrafo de contexto — 3 a 5 líneas máximo -->
+      <p class="context__text">[AQUÍ VA EL TEXTO DE CONTEXTO — lo redacta Isabella]</p>
+
+      <!-- Dato destacado opcional (pull quote) -->
+      <blockquote class="context__pullquote">
+        [AQUÍ VA UN DATO O FRASE DESTACADA — opcional, decide Isabella]
+      </blockquote>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 3: KPIs
+       Contiene: 4 métricas clave del dataset
+       Responsable: Laura define los números, Felipe implementa
+       Nota: los valores los va a calcular main.js desde el CSV
+  =============================================================== -->
+  <section class="kpis" id="kpis">
+
+    <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN KPIs]</h2>
+
+    <div class="kpis__grid">
+
+      <!-- KPI 1 -->
+      <div class="kpi-card">
+        <span class="kpi-card__value" id="kpi-1">—</span>
+        <!-- El guión "—" se reemplaza con el valor real desde main.js -->
+        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 1]</span>
+      </div>
+
+      <!-- KPI 2 -->
+      <div class="kpi-card">
+        <span class="kpi-card__value" id="kpi-2">—</span>
+        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 2]</span>
+      </div>
+
+      <!-- KPI 3 -->
+      <div class="kpi-card">
+        <span class="kpi-card__value" id="kpi-3">—</span>
+        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 3]</span>
+      </div>
+
+      <!-- KPI 4 -->
+      <div class="kpi-card">
+        <span class="kpi-card__value" id="kpi-4">—</span>
+        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 4]</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 4: DASHBOARD — VISUALIZACIONES
+       Contiene: las gráficas D3 de Laura
+       Responsable: Laura diseña, Felipe integra
+       Nota: cada <div> con id es el contenedor donde D3 inyecta el SVG
+  =============================================================== -->
+  <section class="dashboard" id="dashboard">
+
+    <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN DASHBOARD]</h2>
+
+    <div class="dashboard__grid">
+
+      <!-- GRÁFICA 1 -->
+      <div class="chart-card" id="chart-1">
+        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 1]</h3>
+        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 1 — qué muestra]</p>
+        <!-- D3 va a dibujar el SVG aquí adentro desde main.js -->
+        <div class="chart-card__canvas" id="canvas-1"></div>
+      </div>
+
+      <!-- GRÁFICA 2 -->
+      <div class="chart-card" id="chart-2">
+        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 2]</h3>
+        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 2 — qué muestra]</p>
+        <div class="chart-card__canvas" id="canvas-2"></div>
+      </div>
+
+      <!-- GRÁFICA 3 -->
+      <div class="chart-card" id="chart-3">
+        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 3]</h3>
+        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 3 — qué muestra]</p>
+        <div class="chart-card__canvas" id="canvas-3"></div>
+      </div>
+
+      <!-- GRÁFICA 4 — opcional, comentar si no se usa -->
+      <div class="chart-card" id="chart-4">
+        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 4]</h3>
+        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 4 — qué muestra]</p>
+        <div class="chart-card__canvas" id="canvas-4"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 5: CONCLUSIÓN / INSIGHT FINAL
+       Contiene: hallazgo principal de la narrativa
+       Responsable: Isabella redacta, Felipe implementa
+  =============================================================== -->
+  <section class="conclusion" id="conclusion">
+
+    <div class="conclusion__inner">
+
+      <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN CONCLUSIÓN]</h2>
+
+      <!-- Insight principal destacado -->
+      <p class="conclusion__insight">[AQUÍ VA EL INSIGHT PRINCIPAL — la frase clave del proyecto]</p>
+
+      <!-- Párrafo de cierre -->
+      <p class="conclusion__text">[AQUÍ VA EL PÁRRAFO DE CIERRE — lo redacta Isabella]</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 6: FOOTER
+       Contiene: créditos del equipo y fuente de datos
+  =============================================================== -->
+  <footer class="footer">
+
+    <!-- Nombre del equipo -->
+    <p class="footer__team">StoryData Studio</p>
+
+    <!-- Integrantes -->
+    <p class="footer__members">
+      Isabella Navarro · Marco Antonio Cruz · Felipe Ardila · Laura Tacha
+    </p>
+
+    <!-- Fuente de datos -->
+    <p class="footer__source">
+      Fuente de datos: 
+      <span>[AQUÍ VA EL NOMBRE OFICIAL DEL DATASET Y EL LINK SI TIENE]</span>
+    </p>
+
+    <!-- Curso -->
+    <p class="footer__course">Visualización y Storytelling · Universidad de los Andes</p>
+
+  </footer>
+
+
+  <!-- ============================================================
+       SCRIPTS — siempre al final del body para no bloquear el render
+  =============================================================== -->
+
+  <!-- main.js: carga el CSV y construye las visualizaciones D3 -->
+  <script src="main.js"></script>
+
+</body>
+</html>

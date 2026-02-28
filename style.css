@@ -1,0 +1,273 @@
+/* ============================================================
+   STYLE.CSS — StoryData Studio
+   Proyecto Final: Dashboard Campañas Marketing Bancario
+   Responsable: Felipe Ardila
+   ============================================================ */
+
+/* 1. RESET Y VARIABLES */
+:root {
+  /* Paleta definida por el equipo en main.js */
+  --color-crimson: #C0392B;
+  --color-coral: #E8523F;
+  --color-magenta: #A0286E;
+  --color-purple: #6B2FA0;
+  --color-steel: #2D6FA0;
+  --color-muted: #B5A898;
+  --color-subtle: #EDE8DE;
+  --color-bg: #F9F7F2;
+  --color-text-primary: #1C1410;
+  --color-text-secondary: #5C4F4A;
+  
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --shadow-sm: 0 2px 8px rgba(28, 20, 16, 0.08);
+  --shadow-md: 0 4px 20px rgba(28, 20, 16, 0.12);
+  --border-radius: 12px;
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* 2. LAYOUT GENERAL */
+section {
+  padding: 80px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--color-crimson);
+  text-align: center;
+}
+
+/* 3. HERO SECTION */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1C1410 0%, #3D2B24 100%);
+  color: white;
+  padding: 0 20px;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: var(--color-coral);
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* 4. CONTEXTO */
+.context {
+  background-color: white;
+}
+
+.context__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.context__text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-secondary);
+}
+
+.context__pullquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  border-left: 4px solid var(--color-crimson);
+  padding-left: 2rem;
+  margin: 2rem 0;
+  color: var(--color-crimson);
+}
+
+/* 5. KPIs */
+.kpis {
+  background-color: var(--color-subtle);
+}
+
+.kpis__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.kpi-card {
+  background: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-card__value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-magenta);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.kpi-card__label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-secondary);
+}
+
+/* 6. DASHBOARD */
+.dashboard {
+  background-color: white;
+}
+
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 500px) {
+  .dashboard__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background: var(--color-bg);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card__title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.chart-card__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+.chart-card__canvas {
+  width: 100%;
+  min-height: 300px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Estilos para D3 */
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 7. CONCLUSIÓN */
+.conclusion {
+  background-color: var(--color-text-primary);
+  color: white;
+  text-align: center;
+}
+
+.conclusion__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.conclusion__insight {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-coral);
+  margin-bottom: 2rem;
+}
+
+.conclusion__insight p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-coral);
+  margin-bottom: 2rem;
+}
+
+.conclusion__text {
+  opacity: 0.8;
+}
+
+/* 8. FOOTER */
+.footer {
+  padding: 60px 20px;
+  background-color: #f1ede5;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer__team {
+  font-weight: 700;
+  color: var(--color-crimson);
+  margin-bottom: 10px;
+}
+
+.footer__members, .footer__source, .footer__course {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 5px;
+}
+
+/* 9. TOOLTIP D3 */
+.tooltip {
+  position: absolute;
+  padding: 10px;
+  background: rgba(28, 20, 16, 0.95);
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
