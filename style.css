@@ -244,14 +244,14 @@ svg {
 /* 8. FOOTER */
 .footer {
   padding: 60px 20px;
-  background-color: #f1ede5;
+  background-color: #E0F7FA;
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer__team {
   font-weight: 700;
-  color: var(--color-crimson);
+  color: #000000;
   margin-bottom: 10px;
 }
 
