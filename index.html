@@ -3,99 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- [AQUÍ VA EL TÍTULO DE LA PESTAÑA DEL NAVEGADOR] -->
-  <title>Título del Proyecto — StoryData Studio</title>
-
-  <!-- Hoja de estilos principal -->
+  <title>¿Insistir o segmentar? — Proyecto Final de Visualización Storytelling</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- D3.js v7 — librería de visualizaciones -->
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
 
 <body>
 
   <!-- ============================================================
-       SECCIÓN 1: HERO
-       Contiene: título principal, subtítulo e intención narrativa
-       Responsable: Isabella (texto) + Felipe (implementación)
+       SECCIÓN 1: titulo
+       Contiene: título principal e intención narrativa
   =============================================================== -->
   <header class="hero">
 
-    <!-- Eyebrow: etiqueta pequeña arriba del título -->
-    <p class="hero__eyebrow">[AQUÍ VA LA ETIQUETA — ej: "Marketing Bancario · 2025"]</p>
+    <p class="hero__eyebrow">Proyecto Final de Visualización Storytelling · 2026-11</p>
 
-    <!-- Título principal H1 -->
-    <h1 class="hero__title">[AQUÍ VA EL TÍTULO PRINCIPAL]</h1>
+    <!-- [AQUÍ VA EL TÍTULO PRINCIPAL — decide el equipo] -->
+    <h1 class="hero__title">¿Insistir o segmentar?</h1>
 
-    <!-- Subtítulo / intención narrativa en una línea -->
-    <p class="hero__subtitle">[AQUÍ VA EL SUBTÍTULO — intención narrativa en 1-2 líneas]</p>
+    <p class="hero__subtitle">
+      Un análisis de la efectividad de las campañas bancarias en más de 41.000 registros
+      para depósitos a término fijo.
+    </p>
 
   </header>
 
 
   <!-- ============================================================
        SECCIÓN 2: CONTEXTO
-       Contiene: texto explicativo del dataset y la campaña
-       Responsable: Isabella redacta, Felipe implementa
   =============================================================== -->
   <section class="context" id="contexto">
 
     <div class="context__inner">
 
-      <!-- Título de sección -->
-      <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN CONTEXTO]</h2>
+      <h2 class="section-title">Contexto</h2>
 
-      <!-- Párrafo de contexto — 3 a 5 líneas máximo -->
-      <p class="context__text">[AQUÍ VA EL TEXTO DE CONTEXTO — lo redacta Isabella]</p>
+      <p class="context__text">
+        En las campañas comerciales es común asumir que más intentos generan más resultados.
+        Si un cliente no responde al primer contacto, se vuelve a llamar. Y si no funciona
+        la segunda vez, quizá una tercera llamada haga la diferencia. Pero esa lógica,
+        ¿realmente incrementa la probabilidad de aceptación?
+      </p>
 
-      <!-- Dato destacado opcional (pull quote) -->
+      <p class="context__text">
+        Para explorar esta pregunta, analizamos una base con más de 41.000 registros de
+        una campaña bancaria enfocada en depósitos a término fijo. El objetivo no fue solo
+        medir cuántos aceptaron, sino entender <em>por qué</em> algunos clientes dicen sí
+        y otros no. ¿Importa el número de contactos? ¿Influye el canal utilizado? ¿O el
+        perfil del cliente pesa más que la insistencia?
+      </p>
+
       <blockquote class="context__pullquote">
-        [AQUÍ VA UN DATO O FRASE DESTACADA — opcional, decide Isabella]
+        A lo largo del análisis se comparan variables demográficas, financieras y
+        estratégicas para identificar qué factores se relacionan con una mayor
+        probabilidad de aceptación.
       </blockquote>
 
-    </div>
-
-  </section>
-
-
-  <!-- ============================================================
-       SECCIÓN 3: KPIs
-       Contiene: 4 métricas clave del dataset
-       Responsable: Laura define los números, Felipe implementa
-       Nota: los valores los va a calcular main.js desde el CSV
-  =============================================================== -->
-  <section class="kpis" id="kpis">
-
-    <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN KPIs]</h2>
-
-    <div class="kpis__grid">
-
-      <!-- KPI 1 -->
-      <div class="kpi-card">
-        <span class="kpi-card__value" id="kpi-1">—</span>
-        <!-- El guión "—" se reemplaza con el valor real desde main.js -->
-        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 1]</span>
-      </div>
-
-      <!-- KPI 2 -->
-      <div class="kpi-card">
-        <span class="kpi-card__value" id="kpi-2">—</span>
-        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 2]</span>
-      </div>
-
-      <!-- KPI 3 -->
-      <div class="kpi-card">
-        <span class="kpi-card__value" id="kpi-3">—</span>
-        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 3]</span>
-      </div>
-
-      <!-- KPI 4 -->
-      <div class="kpi-card">
-        <span class="kpi-card__value" id="kpi-4">—</span>
-        <span class="kpi-card__label">[AQUÍ VA LA ETIQUETA DEL KPI 4]</span>
-      </div>
+      <p class="context__text">
+        El recorrido parte de lo general y avanza hacia segmentos específicos, donde
+        empiezan a aparecer patrones claros. La invitación es simple: observar los datos
+        antes de asumir que más llamadas significan mejores resultados.
+      </p>
 
     </div>
 
@@ -103,105 +70,48 @@
 
 
   <!-- ============================================================
-       SECCIÓN 4: DASHBOARD — VISUALIZACIONES
-       Contiene: las gráficas D3 de Laura
-       Responsable: Laura diseña, Felipe integra
-       Nota: cada <div> con id es el contenedor donde D3 inyecta el SVG
+       SECCIÓN 3: DASHBOARD 
   =============================================================== -->
   <section class="dashboard" id="dashboard">
 
-    <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN DASHBOARD]</h2>
 
-    <div class="dashboard__grid">
 
-      <!-- GRÁFICA 1 -->
-      <div class="chart-card" id="chart-1">
-        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 1]</h3>
-        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 1 — qué muestra]</p>
-        <!-- D3 va a dibujar el SVG aquí adentro desde main.js -->
-        <div class="chart-card__canvas" id="canvas-1"></div>
-      </div>
-
-      <!-- GRÁFICA 2 -->
-      <div class="chart-card" id="chart-2">
-        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 2]</h3>
-        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 2 — qué muestra]</p>
-        <div class="chart-card__canvas" id="canvas-2"></div>
-      </div>
-
-      <!-- GRÁFICA 3 -->
-      <div class="chart-card" id="chart-3">
-        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 3]</h3>
-        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 3 — qué muestra]</p>
-        <div class="chart-card__canvas" id="canvas-3"></div>
-      </div>
-
-      <!-- GRÁFICA 4 — opcional, comentar si no se usa -->
-      <div class="chart-card" id="chart-4">
-        <h3 class="chart-card__title">[AQUÍ VA EL TÍTULO DE LA GRÁFICA 4]</h3>
-        <p class="chart-card__desc">[AQUÍ VA LA DESCRIPCIÓN DE LA GRÁFICA 4 — qué muestra]</p>
-        <div class="chart-card__canvas" id="canvas-4"></div>
-      </div>
-
+    <div class="dashboard__iframe-wrapper">
+      <iframe
+        src="https://lookerstudio.google.com/embed/reporting/585ba5f5-48d4-4e92-bed9-0cadaa63abcc/page/1"
+        width="100%"
+        height="2000"
+        frameborder="0"
+        style="border: none;"
+        allowfullscreen>
+      </iframe>
     </div>
 
   </section>
 
 
   <!-- ============================================================
-       SECCIÓN 5: CONCLUSIÓN / INSIGHT FINAL
-       Contiene: hallazgo principal de la narrativa
-       Responsable: Isabella redacta, Felipe implementa
-  =============================================================== -->
-  <section class="conclusion" id="conclusion">
-
-    <div class="conclusion__inner">
-
-      <h2 class="section-title">[AQUÍ VA EL TÍTULO DE LA SECCIÓN CONCLUSIÓN]</h2>
-
-      <!-- Insight principal destacado -->
-      <p class="conclusion__insight">[AQUÍ VA EL INSIGHT PRINCIPAL — la frase clave del proyecto]</p>
-
-      <!-- Párrafo de cierre -->
-      <p class="conclusion__text">[AQUÍ VA EL PÁRRAFO DE CIERRE — lo redacta Isabella]</p>
-
-    </div>
-
-  </section>
-
-
-  <!-- ============================================================
-       SECCIÓN 6: FOOTER
-       Contiene: créditos del equipo y fuente de datos
+       SECCIÓN 4: FOOTER
+       Créditos del equipo y fuente de datos
   =============================================================== -->
   <footer class="footer">
 
-    <!-- Nombre del equipo -->
     <p class="footer__team">StoryData Studio</p>
 
-    <!-- Integrantes -->
     <p class="footer__members">
       Isabella Navarro · Marco Antonio Cruz · Felipe Ardila · Laura Tacha
     </p>
 
-    <!-- Fuente de datos -->
     <p class="footer__source">
-      Fuente de datos: 
-      <span>[AQUÍ VA EL NOMBRE OFICIAL DEL DATASET Y EL LINK SI TIENE]</span>
+      Fuente de datos:
+      <span>[AQUÍ VA EL NOMBRE OFICIAL DEL DATASET Y EL LINK]</span>
     </p>
 
-    <!-- Curso -->
-    <p class="footer__course">Visualización y Storytelling · Universidad de los Andes</p>
+    <p class="footer__course">
+      [AQUÍ VA EL NOMBRE DEL CURSO Y LA INSTITUCIÓN]
+    </p>
 
   </footer>
-
-
-  <!-- ============================================================
-       SCRIPTS — siempre al final del body para no bloquear el render
-  =============================================================== -->
-
-  <!-- main.js: carga el CSV y construye las visualizaciones D3 -->
-  <script src="main.js"></script>
 
 </body>
 </html>
